@@ -26,18 +26,14 @@ public class MainWindow extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainWindow.fxml")));
 
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainWindow.fxml")));
 
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newTask.fxml"))));
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("openTask.fxml"))));
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("saveTask.fxml"))));
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("exportToCRM.fxml"))));
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("exportRequest.fxml"))));
-
-
-
-
 
         ObservableList<Node> nodes =root.getChildrenUnmodifiable();
         //выбираем узел в который должны вставляться окна
@@ -46,7 +42,7 @@ public class MainWindow extends Application {
         System.out.println(nodes);
 
 
-        Scene scene = new Scene(root, 320, 240);
+        Scene scene = new Scene(root);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

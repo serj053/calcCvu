@@ -9,7 +9,7 @@
     <top>
         <MenuBar BorderPane.alignment="CENTER">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Файл">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#itemNewTask" text="Новая сделка" />
                         <MenuItem mnemonicParsing="false" onAction="#itemOpenTask" text="Открыть сделку" />
@@ -18,20 +18,20 @@
                         <MenuItem mnemonicParsing="false" onAction="#itemExportRequest" text="Экспорт запроса электропривода" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
+                <Menu mnemonicParsing="false" text="О программе">
                     <items>
                         <MenuItem mnemonicParsing="false" text="Delete" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="Справка" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
     </top>
     <center>
-        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+        <BorderPane prefHeight="600.0" prefWidth="1000.0" BorderPane.alignment="CENTER" />
     </center>
 </BorderPane>
