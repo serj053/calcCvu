@@ -12,7 +12,7 @@ import nppnha.calccvu.windows.NewTaskTable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class newTaskController implements Initializable {
+public class NewTaskController implements Initializable {
     @FXML
     private TableView<NewTaskTable> resultTable;
 

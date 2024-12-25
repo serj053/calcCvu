@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import nppnha.calccvu.controllers.MainController;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,7 +28,12 @@ public class MainWindow extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainWindow.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Objects.requireNonNull(getClass().getResource("MainWindow.fxml")));
+        Parent root = loader.load();
+        MainController controller = loader.getController();
+        controller.setHost(this);
+
 
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newTask.fxml"))));
         anchorPanes.add(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("openTask.fxml"))));
@@ -38,8 +44,6 @@ public class MainWindow extends Application {
         ObservableList<Node> nodes =root.getChildrenUnmodifiable();
         //выбираем узел в который должны вставляться окна
         node =(BorderPane) nodes.get(1);
-
-        System.out.println(nodes);
 
 
         Scene scene = new Scene(root);

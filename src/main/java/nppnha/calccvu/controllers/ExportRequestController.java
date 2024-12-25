@@ -1,4 +1,4 @@
 package nppnha.calccvu.controllers;
 
-public class exportRequestController {
+public class ExportRequestController {
 }
